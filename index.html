@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perceptron</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  </head>
+  <style>
+    .remove-arrow::-webkit-inner-spin-button,
+    .remove-arrow::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .remove-arrow {
+      -moz-appearance: textfield;
+    }
+  </style>
+  <script src="app.js"></script>
+  <body class="bg-gray-900 w-screen h-screen p-4">
+    <h1 class="mx-auto text-center text-white text-4xl font-bold">
+      Perceptron
+    </h1>
+    <div class="flex mx-auto w-11/12 justify-between mt-12">
+      <div class="flex-1 justify-center">
+        <div class="p-4 border-blue-600 border-4 h-full rounded-lg">
+          <span class="font-bold text-white text-2xl text-center"
+            >Settings</span
+          >
+          <div id="settings" class="text-white text-lg">
+            <div>
+              <span class="mr-2 font-bold">Formula:</span>
+              <span>
+                y =
+                <input
+                  type="number"
+                  class="outline-none font-bold bg-transparent remove-arrow w-6 border-b-2 border-white text-center"
+                  value="1"
+                  id="slope"
+                />
+                * x + 0
+              </span>
+            </div>
+
+            <div>
+              <span class="mr-2 font-bold">Learning rate:</span>
+              <input
+                type="number"
+                class="outline-none font-bold bg-transparent remove-arrow w-10 border-b-2 border-white text-center"
+                value="1"
+                id="lr"
+              />
+            </div>
+            <div>
+              <span class="mr-2 font-bold">Prediction line:</span>
+              <span id="prediction" clas="font-bold"></span>
+            </div>
+
+            <button class="bg-blue-600 rounded px-16 py-4 hover:bg-blue-500 transition-all" id="start">Start</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 flex-row">
+        <div>
+          <div
+            id="canvas"
+            class="flex w-min mx-auto border-4 border-blue-600 rounded-lg"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
